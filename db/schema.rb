@@ -13,9 +13,6 @@
 ActiveRecord::Schema[8.0].define(version: 2025_08_29_092120) do
   create_table "ingredients", force: :cascade do |t|
     t.string "ingr_name", null: false
-    t.datetime "test_field1", null: false
-    t.string "test_field2"
-    t.string "test_field3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
