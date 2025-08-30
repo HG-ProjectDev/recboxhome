@@ -185,3 +185,9 @@ FOREIGN KEY ("ingredient_id")
   [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250829092120') RETURNING "version" /*application='Recboxhome'*/[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Jay', 'Cutler', 'jcutler@recipebox.com', '$2a$12$KJvVsf5YcLBRu9W6C20YQeQFc6E6OIZTpFLllIaExasxmW22Ro5w.', 1, 'Active', '2025-08-30 11:45:04.272485', '2025-08-30 11:45:04.272485') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Frank', 'Zane', 'fzane@email.com', '$2a$12$blyNOt83ohLslHR70JYVVu2uHJ2ugwmGY1lXkxe4DpMjg5o2ydl0G', 0, 'Active', '2025-08-30 11:50:22.083273', '2025-08-30 11:50:22.083273') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
