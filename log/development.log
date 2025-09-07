@@ -191,3 +191,48 @@ FOREIGN KEY ("ingredient_id")
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
   [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Frank', 'Zane', 'fzane@email.com', '$2a$12$blyNOt83ohLslHR70JYVVu2uHJ2ugwmGY1lXkxe4DpMjg5o2ydl0G', 0, 'Active', '2025-08-30 11:50:22.083273', '2025-08-30 11:50:22.083273') RETURNING "id" /*application='Recboxhome'*/[0m
   [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (10.8ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('John', 'Smith', 'jsmith@email.com', '$2a$12$VDcTGfxGUbN/6arc1L39rulsoPzQ3wUnSmb5jix9edzDSdyntatT6', 0, 'Active', '2025-09-07 10:55:30.854082', '2025-09-07 10:55:30.854082') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('John', 'Doe', 'johndoe@email.com', '$2a$12$dcCG6aZ7nuc4HDpBNlNG0OJ.bzBACilaszsNR/uK45p4Jj9axY0Wy', 0, 'Active', '2025-09-07 10:56:39.547931', '2025-09-07 10:56:39.547931') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Jane', 'Doe', 'janedoe@email.com', '$2a$12$Zf9akwGHtM/RLVhgmHKdweXvMlc2rh0no4EkX6c8vCp03y4ZDU21K', 0, 'Suspended', '2025-09-07 10:57:27.108932', '2025-09-07 10:57:27.108932') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Bob', 'Smith', 'bobsmith@email.com', '$2a$12$5iMjUqvVgOkg.WrDibjJduFil.NpSLTVVouPMe5DKXMvC8c56m.W2', 0, 'Active', '2025-09-07 10:58:02.927027', '2025-09-07 10:58:02.927027') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Alice', 'Johnson', 'alicejohnson@email.com', '$2a$12$gvjvVd6Hei4EZfEzRRoqlOTgkoM/XlUzwewND3mtzYG/SOS97q5d2', 0, 'Active', '2025-09-07 10:58:40.517621', '2025-09-07 10:58:40.517621') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Sarah', 'Lee', 'sarahlee@email.com', '$2a$12$EyrvjGvXJ/f5o6FOUZ9KLOaFRgkVmK/axHxY3dRBF48vpBztQBThe', 0, 'Active', '2025-09-07 10:59:01.204617', '2025-09-07 10:59:01.204617') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('David', 'Brown', 'davidbrown@email.com', '$2a$12$H7.ZJWG2Xb4IM0EHQoNeR.QBTcJtUF6NsFwQaJVV1mq281eYRMIuy', 0, 'Active', '2025-09-07 10:59:29.059419', '2025-09-07 10:59:29.059419') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Emily', 'Wilson', 'emilywilson@email.com', '$2a$12$9.9oUst8gZl4.dnWpfhCs.RvYqOcBLloURrmEQzsqNq98Cgj/0MX.', 0, 'Suspended', '2025-09-07 10:59:58.160430', '2025-09-07 10:59:58.160430') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Oliver', 'Taylor', 'olivertaylor@email.com', '$2a$12$uxjecW0ykwDYYM4JQLcWdOVwfCU/BmuqHFqEKi0wHTNXucuWx.HU6', 0, 'Active', '2025-09-07 11:00:31.880914', '2025-09-07 11:00:31.880914') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Grace', 'Anderson', 'graceanderson@email.com', '$2a$12$qOf.H9U.AmntPopfPrdT5ut62EebD2oLTaD.sHBJs2CwSyq/h3Tdq', 0, 'Active', '2025-09-07 11:00:56.822980', '2025-09-07 11:00:56.822980') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Lucas', 'Scott', 'lucasscott@email.com', '$2a$12$pviOWK6evtl3IwWd6lX7jOFfCiMN5uCdHd/UI8t3KWHT7wB1x/09W', 0, 'Banned', '2025-09-07 11:01:27.356368', '2025-09-07 11:01:27.356368') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES ('Larry', 'Bird', 'lbird@email.com', '$2a$12$AuLg9L6fb7WB/BkQFSaiUeioFp.0VtDngnNULRqC50wKM/UMtkw7u', 0, 'Active', '2025-09-07 11:01:55.550628', '2025-09-07 11:01:55.550628') RETURNING "id" /*application='Recboxhome'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."status" = 'Banned' LIMIT 1 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."status" = 'Suspended' /* loading for pp */ LIMIT 11 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."status" != 'Active' /* loading for pp */ LIMIT 11 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."status" != 'Active' /* loading for pp */ LIMIT 11 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."status" != 'Banned' /* loading for pp */ LIMIT 11 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."status" = 'Suspended' OR "users"."status" = 'Banned') /* loading for pp */ LIMIT 11 /*application='Recboxhome'*/[0m
