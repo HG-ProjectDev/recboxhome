@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #get "search/index"
   resources :ingredients
   resources :recipes
   resources :users
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get '/about', to: 'about#index'
+  get 'search', to: 'search#index'
 
 
 end
