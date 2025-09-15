@@ -1863,3 +1863,925 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 19ms (Views: 2.8ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-09-15 11:22:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Recboxhome'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (5.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 28.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | GC: 0.0ms)
+Completed 200 OK in 365ms (Views: 94.9ms | ActiveRecord: 8.6ms (8 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-09-15 11:22:47 +0000
+Started GET "/recipes/3" for 127.0.0.1 at 2025-09-15 11:22:57 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 3 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:63:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 34.7ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | GC: 0.0ms)
+Completed 200 OK in 67ms (Views: 43.6ms | ActiveRecord: 0.5ms (6 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes/3/edit" for 127.0.0.1 at 2025-09-15 11:23:02 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 3 LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:63:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (Duration: 32.3ms | GC: 0.0ms)
+  Rendered recipes/edit.html.erb within layouts/application (Duration: 37.9ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 12.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | GC: 0.0ms)
+Completed 200 OK in 72ms (Views: 52.8ms | ActiveRecord: 0.4ms (6 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2025-09-15 11:23:19 +0000
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 15.8ms | ActiveRecord: 0.3ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2025-09-15 11:23:20 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='about'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 0.0ms)
+Completed 200 OK in 30ms (Views: 12.2ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-15 11:23:22 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (3.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 9.6ms | ActiveRecord: 3.9ms (8 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2025-09-15 11:23:25 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.6ms | GC: 0.0ms)
+  Rendered users/new.html.erb within layouts/application (Duration: 18.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | GC: 2.1ms)
+Completed 200 OK in 54ms (Views: 29.3ms | ActiveRecord: 0.6ms (5 queries, 4 cached) | GC: 2.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-09-15 11:23:27 +0000
+  
+ActionController::RoutingError (uninitialized constant SessionController)
+Caused by: ActionDispatch::MissingController (uninitialized constant SessionController)
+Caused by: NameError (uninitialized constant SessionController)
+
+Information for: ActionController::RoutingError (uninitialized constant SessionController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant SessionController):
+  
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:102:in 'ActionDispatch::Request#controller_class_for'
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:91:in 'ActionDispatch::Request#controller_class'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:61:in 'ActionDispatch::Routing::RouteSet::Dispatcher#controller'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:48:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2.1) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.0) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.0) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.0) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2.1) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.0) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.0) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.1) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.1) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.1) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: NameError (uninitialized constant SessionController):
+  
+activesupport (8.0.2.1) lib/active_support/inflector/methods.rb:290:in 'ActiveSupport::Inflector#constantize'
+activesupport (8.0.2.1) lib/active_support/core_ext/string/inflections.rb:74:in 'String#constantize'
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:99:in 'ActionDispatch::Request#controller_class_for'
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:91:in 'ActionDispatch::Request#controller_class'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:61:in 'ActionDispatch::Routing::RouteSet::Dispatcher#controller'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:48:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2.1) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.0) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.0) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.0) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2.1) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.0) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.0) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.1) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.1) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.1) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2025-09-15 11:25:27 +0000
+  
+ActionController::RoutingError (uninitialized constant SessionController)
+Caused by: ActionDispatch::MissingController (uninitialized constant SessionController)
+Caused by: NameError (uninitialized constant SessionController)
+
+Information for: ActionController::RoutingError (uninitialized constant SessionController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant SessionController):
+  
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:102:in 'ActionDispatch::Request#controller_class_for'
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:91:in 'ActionDispatch::Request#controller_class'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:61:in 'ActionDispatch::Routing::RouteSet::Dispatcher#controller'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:48:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2.1) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.0) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.0) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.0) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2.1) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.0) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.0) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.1) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.1) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.1) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: NameError (uninitialized constant SessionController):
+  
+activesupport (8.0.2.1) lib/active_support/inflector/methods.rb:290:in 'ActiveSupport::Inflector#constantize'
+activesupport (8.0.2.1) lib/active_support/core_ext/string/inflections.rb:74:in 'String#constantize'
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:99:in 'ActionDispatch::Request#controller_class_for'
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:91:in 'ActionDispatch::Request#controller_class'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:61:in 'ActionDispatch::Routing::RouteSet::Dispatcher#controller'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:48:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2.1) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.0) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.0) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.0) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2.1) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.0) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.0) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.1) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.1) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.1) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/search" for 127.0.0.1 at 2025-09-15 11:31:54 +0000
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 16.1ms | ActiveRecord: 1.2ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-15 11:31:55 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 8.0ms | ActiveRecord: 0.8ms (8 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-09-15 11:31:56 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.2ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 1.3ms)
+Completed 200 OK in 19ms (Views: 10.0ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 1.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-09-15 11:33:12 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'jsmith@email.com' LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in 'SessionsController#create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 7.3ms | ActiveRecord: 0.4ms (6 queries, 4 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-09-15 11:33:42 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'jsmith@email.com' LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in 'SessionsController#create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 9.4ms | ActiveRecord: 0.4ms (6 queries, 4 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1 /*application='Recboxhome'*/[0m
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*application='Recboxhome'*/[0m
+Started POST "/login" for 127.0.0.1 at 2025-09-15 11:36:22 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'johndoe@email.com' LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in 'SessionsController#create'
+Redirected to http://localhost:3000/userhome
+Completed 302 Found in 242ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2025-09-15 11:36:22 +0000
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='uindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2025-09-15 11:36:35 +0000
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='uindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 4.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/your-recipes" for 127.0.0.1 at 2025-09-15 11:36:38 +0000
+Processing by HomeController#urecipes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/urecipes.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (6, 7) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (26, 2, 25, 27, 28, 6, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  Rendered home/urecipes.html.erb within layouts/application (Duration: 7.1ms | GC: 0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | GC: 0.4ms)
+Completed 200 OK in 22ms (Views: 10.2ms | ActiveRecord: 0.6ms (4 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/recipes/6" for 127.0.0.1 at 2025-09-15 11:36:41 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "6"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 6 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:63:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.2ms)
+Completed 200 OK in 17ms (Views: 6.3ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2025-09-15 11:36:50 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-15 11:36:50 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 8.3ms | ActiveRecord: 0.7ms (8 queries, 4 cached) | GC: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-09-15 11:36:52 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 8.3ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-09-15 11:37:02 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'johndoe@email.com' LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in 'SessionsController#create'
+Redirected to http://localhost:3000/userhome
+Completed 302 Found in 239ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2025-09-15 11:37:02 +0000
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='uindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2025-09-15 11:37:05 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='about'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2025-09-15 11:37:06 +0000
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-15 11:37:07 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 3.4ms | ActiveRecord: 0.8ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2025-09-15 11:37:13 +0000
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='uindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/your-recipes" for 127.0.0.1 at 2025-09-15 11:37:22 +0000
+Processing by HomeController#urecipes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/urecipes.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (6, 7) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (26, 2, 25, 27, 28, 6, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  Rendered home/urecipes.html.erb within layouts/application (Duration: 6.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 9.6ms | ActiveRecord: 0.6ms (4 queries, 0 cached) | GC: 19.2ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2025-09-15 11:37:24 +0000
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='uindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2025-09-15 11:37:32 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-15 11:37:32 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.4ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.5ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 1.1ms)
+Completed 200 OK in 28ms (Views: 8.7ms | ActiveRecord: 0.9ms (8 queries, 4 cached) | GC: 2.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-09-15 11:37:37 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.8ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.8ms)
+Completed 200 OK in 19ms (Views: 9.4ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-09-15 11:38:22 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'jcutler@recipebox.com' LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in 'SessionsController#create'
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 238ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2025-09-15 11:38:22 +0000
+Processing by HomeController#aindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aindex.html.erb within layouts/application
+  Rendered home/aindex.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='aindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 1.1ms)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2025-09-15 11:38:28 +0000
+Processing by HomeController#aindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aindex.html.erb within layouts/application
+  Rendered home/aindex.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='aindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-09-15 11:38:31 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Recboxhome',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Recboxhome',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.3ms)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.3ms)
+Completed 200 OK in 22ms (Views: 6.2ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2025-09-15 11:38:35 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1 /*action='show',application='Recboxhome',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:66:in 'UsersController#set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='show',application='Recboxhome',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 7.9ms | GC: 0.4ms)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.4ms)
+Completed 200 OK in 30ms (Views: 10.2ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-09-15 11:38:42 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Recboxhome',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Recboxhome',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.3ms)
+Completed 200 OK in 16ms (Views: 4.3ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2025-09-15 11:38:50 +0000
+Processing by HomeController#aindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aindex.html.erb within layouts/application
+  Rendered home/aindex.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='aindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 4.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2025-09-15 11:38:54 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-15 11:38:54 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.5ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 7.6ms | ActiveRecord: 0.9ms (8 queries, 4 cached) | GC: 1.9ms)
+
+
