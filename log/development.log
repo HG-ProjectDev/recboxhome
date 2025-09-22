@@ -2785,3 +2785,1148 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 29ms (Views: 7.6ms | ActiveRecord: 0.9ms (8 queries, 4 cached) | GC: 1.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-09-22 07:14:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Recboxhome'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 13.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | GC: 0.0ms)
+Completed 200 OK in 148ms (Views: 43.4ms | ActiveRecord: 4.0ms (8 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-09-22 07:14:54 +0000
+Started GET "/login" for 127.0.0.1 at 2025-09-22 07:14:59 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 17.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 16.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | GC: 0.0ms)
+Completed 200 OK in 54ms (Views: 38.1ms | ActiveRecord: 1.9ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*application='Recboxhome'*/[0m
+Started POST "/login" for 127.0.0.1 at 2025-09-22 07:17:14 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'johndoe@email.com' LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in 'SessionsController#create'
+Redirected to http://localhost:3000/userhome
+Completed 302 Found in 262ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2025-09-22 07:17:14 +0000
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='uindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 6.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/your-recipes" for 127.0.0.1 at 2025-09-22 07:17:20 +0000
+Processing by HomeController#urecipes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/urecipes.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (6, 7) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (26, 2, 25, 27, 28, 6, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  Rendered home/urecipes.html.erb within layouts/application (Duration: 8.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 11.5ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-22 08:50:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Recboxhome'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (4.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 27.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 96.6ms | GC: 0.0ms)
+Completed 200 OK in 363ms (Views: 114.3ms | ActiveRecord: 7.6ms (8 queries, 4 cached) | GC: 1.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-09-22 08:50:25 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 25.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | GC: 0.0ms)
+Completed 200 OK in 54ms (Views: 36.0ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-09-22 08:50:34 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'johndoe@email.com' LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in 'SessionsController#create'
+Redirected to http://localhost:3000/userhome
+Completed 302 Found in 262ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2025-09-22 08:50:35 +0000
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='uindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 7.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2025-09-22 08:50:39 +0000
+Processing by RecipesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='new',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" /*action='new',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  Rendered recipes/_form.html.erb (Duration: 77.1ms | GC: 0.0ms)
+  Rendered recipes/new.html.erb within layouts/application (Duration: 83.5ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 85.4ms | GC: 0.0ms)
+Completed 200 OK in 115ms (Views: 85.6ms | ActiveRecord: 0.7ms (9 queries, 7 cached) | GC: 0.0ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2025-09-22 08:54:44 +0000
+Processing by RecipesController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "recipe" => {"user_id" => "4", "title" => "Chicken Piccata - Test", "description" => "A rich Italian dish for a cold winter's night.", "instructions" => "Step 1\r\nStep 2\r\nStep 3\r\nStep 4\r\nStep 5\r\nStep 6", "is_public" => "1", "recipe_ingredients_attributes" => {"0" => {"ingredient_id" => "15", "ingr_qty" => "2 Large"}, "1" => {"ingredient_id" => "6", "ingr_qty" => "1/2 cup"}, "2" => {"ingredient_id" => "9", "ingr_qty" => "1/2 tsps"}, "3" => {"ingredient_id" => "16", "ingr_qty" => "1/2 tsps"}, "4" => {"ingredient_id" => "18", "ingr_qty" => "2t bsp"}, "5" => {"ingredient_id" => "43", "ingr_qty" => "1/2 cup"}, "6" => {"ingredient_id" => "", "ingr_qty" => ""}, "7" => {"ingredient_id" => "", "ingr_qty" => ""}}}, "commit" => "Create Recipe"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = 15 LIMIT 1 /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = 6 LIMIT 1 /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = 9 LIMIT 1 /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = 16 LIMIT 1 /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = 18 LIMIT 1 /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = 43 LIMIT 1 /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "description", "instructions", "is_public", "user_id", "created_at", "updated_at") VALUES ('Chicken Piccata - Test', 'A rich Italian dish for a cold winter''s night.', 'Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+Step 6', 1, 4, '2025-09-22 08:54:44.542879', '2025-09-22 08:54:44.542879') RETURNING "id" /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mRecipeIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("recipe_id", "ingredient_id", "ingr_qty", "created_at", "updated_at") VALUES (12, 15, '2 Large', '2025-09-22 08:54:44.546612', '2025-09-22 08:54:44.546612') RETURNING "id" /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mRecipeIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("recipe_id", "ingredient_id", "ingr_qty", "created_at", "updated_at") VALUES (12, 6, '1/2 cup', '2025-09-22 08:54:44.549238', '2025-09-22 08:54:44.549238') RETURNING "id" /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mRecipeIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("recipe_id", "ingredient_id", "ingr_qty", "created_at", "updated_at") VALUES (12, 9, '1/2 tsps', '2025-09-22 08:54:44.552108', '2025-09-22 08:54:44.552108') RETURNING "id" /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mRecipeIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("recipe_id", "ingredient_id", "ingr_qty", "created_at", "updated_at") VALUES (12, 16, '1/2 tsps', '2025-09-22 08:54:44.554692', '2025-09-22 08:54:44.554692') RETURNING "id" /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mRecipeIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("recipe_id", "ingredient_id", "ingr_qty", "created_at", "updated_at") VALUES (12, 18, '2t bsp', '2025-09-22 08:54:44.557020', '2025-09-22 08:54:44.557020') RETURNING "id" /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mRecipeIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("recipe_id", "ingredient_id", "ingr_qty", "created_at", "updated_at") VALUES (12, 43, '1/2 cup', '2025-09-22 08:54:44.559288', '2025-09-22 08:54:44.559288') RETURNING "id" /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:28:in 'block in RecipesController#create'
+Redirected to http://localhost:3000/recipes/12
+Completed 302 Found in 69ms (ActiveRecord: 12.0ms (14 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2025-09-22 08:54:44 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "12"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:64:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 69.6ms | GC: 31.5ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 18.1ms | GC: 8.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 97.4ms | GC: 43.3ms)
+Completed 200 OK in 130ms (Views: 101.7ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 54.8ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2025-09-22 08:55:14 +0000
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 6.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/search?ingredient_query=lemon&commit=Search+Recipes" for 127.0.0.1 at 2025-09-22 08:55:17 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"ingredient_query" => "lemon", "commit" => "Search Recipes"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipe_ingredients"."recipe_id" = "recipes"."id" INNER JOIN "recipe_ingredients" "recipe_ingredients_recipes_join" ON "recipe_ingredients_recipes_join"."recipe_id" = "recipes"."id" INNER JOIN "ingredients" ON "ingredients"."id" = "recipe_ingredients_recipes_join"."ingredient_id" WHERE (ingredients.ingr_name LIKE '%lemon%') /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/views/search/index.html.erb:10
+  Rendered search/index.html.erb within layouts/application (Duration: 37.8ms | GC: 1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | GC: 1.2ms)
+Completed 200 OK in 54ms (Views: 42.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2025-09-22 08:55:20 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "12"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:64:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 10.9ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-09-22 08:56:10 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/12" for 127.0.0.1 at 2025-09-22 08:56:13 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "12"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:64:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 9.2ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mRecipe Pluck (0.6ms)[0m  [1m[34mSELECT "recipes"."title" FROM "recipes" WHERE "recipes"."usier_id" = 4 /*application='Recboxhome'*/[0m
+  [1m[36mRecipe Pluck (0.2ms)[0m  [1m[34mSELECT "recipes"."title" FROM "recipes" WHERE "recipes"."user_id" = 4 /*application='Recboxhome'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*application='Recboxhome'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-09-22 09:05:12 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.7ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | GC: 1.3ms)
+Completed 200 OK in 46ms (Views: 12.8ms | ActiveRecord: 1.3ms (4 queries, 0 cached) | GC: 3.2ms)
+
+
+Started GET "/your-recipes" for 127.0.0.1 at 2025-09-22 09:05:21 +0000
+Processing by HomeController#urecipes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/urecipes.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (6, 7, 12) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (26, 2, 25, 27, 28, 6, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36, 15, 9, 16, 18, 43) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  Rendered home/urecipes.html.erb within layouts/application (Duration: 8.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | GC: 0.8ms)
+Completed 200 OK in 27ms (Views: 12.1ms | ActiveRecord: 0.6ms (4 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2025-09-22 09:05:54 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='index',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/views/recipes/index.html.erb:8
+  Rendered recipes/_recipe.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (Duration: 10.5ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 12.8ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/your-recipes" for 127.0.0.1 at 2025-09-22 09:06:07 +0000
+Processing by HomeController#urecipes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/urecipes.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (6, 7, 12) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (26, 2, 25, 27, 28, 6, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36, 15, 9, 16, 18, 43) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  Rendered home/urecipes.html.erb within layouts/application (Duration: 7.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 10.0ms | ActiveRecord: 0.7ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-22 09:06:11 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 4.4ms | ActiveRecord: 0.7ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2025-09-22 09:06:13 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 4.9ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2025-09-22 09:06:16 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='index',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/views/recipes/index.html.erb:8
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 4.8ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-22 09:06:25 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 4.0ms | ActiveRecord: 0.7ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2025-09-22 09:06:27 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 4.2ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2025-09-22 09:06:29 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1 LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" = 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/views/recipes/_form.html.erb:37
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  Rendered recipes/_form.html.erb (Duration: 55.0ms | GC: 24.6ms)
+  Rendered recipes/edit.html.erb within layouts/application (Duration: 56.0ms | GC: 24.6ms)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 57.7ms | GC: 24.6ms)
+Completed 200 OK in 75ms (Views: 57.8ms | ActiveRecord: 0.7ms (13 queries, 9 cached) | GC: 24.6ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2025-09-22 09:07:34 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-22 09:07:34 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.4ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.1ms | GC: 1.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | GC: 1.5ms)
+Completed 200 OK in 37ms (Views: 13.4ms | ActiveRecord: 1.0ms (8 queries, 4 cached) | GC: 2.6ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2025-09-22 09:07:35 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.6ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | GC: 0.6ms)
+Completed 200 OK in 20ms (Views: 9.2ms | ActiveRecord: 0.3ms (6 queries, 4 cached) | GC: 0.6ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2025-09-22 09:07:41 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1 LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-09-22 09:07:41 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-22 09:07:43 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 7.5ms | ActiveRecord: 0.7ms (8 queries, 4 cached) | GC: 0.4ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2025-09-22 09:07:45 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.3ms | GC: 2.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | GC: 2.0ms)
+Completed 200 OK in 21ms (Views: 10.7ms | ActiveRecord: 0.3ms (6 queries, 4 cached) | GC: 2.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2025-09-22 09:07:46 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'recipes' for nil):
+  
+app/controllers/recipes_controller.rb:7:in 'RecipesController#index'
+Started DELETE "/recipes/1" for 127.0.0.1 at 2025-09-22 09:07:53 +0000
+Processing by RecipesController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1 LIMIT 1 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-09-22 09:07:53 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 8.0ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-22 09:07:55 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 1.9ms)
+Completed 200 OK in 25ms (Views: 9.4ms | ActiveRecord: 0.6ms (8 queries, 4 cached) | GC: 1.9ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2025-09-22 09:07:58 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='about'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2025-09-22 09:07:59 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='about'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 1.1ms)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 1.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2025-09-22 09:08:01 +0000
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 8.7ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/search?ingredient_query=lemon&commit=Search+Recipes" for 127.0.0.1 at 2025-09-22 09:08:03 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"ingredient_query" => "lemon", "commit" => "Search Recipes"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipe_ingredients"."recipe_id" = "recipes"."id" INNER JOIN "recipe_ingredients" "recipe_ingredients_recipes_join" ON "recipe_ingredients_recipes_join"."recipe_id" = "recipes"."id" INNER JOIN "ingredients" ON "ingredients"."id" = "recipe_ingredients_recipes_join"."ingredient_id" WHERE (ingredients.ingr_name LIKE '%lemon%') /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/views/search/index.html.erb:10
+  Rendered search/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 11.5ms | ActiveRecord: 0.6ms (6 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2025-09-22 09:08:05 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "12"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.3ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | GC: 0.9ms)
+Completed 200 OK in 20ms (Views: 9.2ms | ActiveRecord: 0.4ms (6 queries, 4 cached) | GC: 0.9ms)
+
+
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2025-09-22 09:08:07 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id" => "12"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2025-09-22 09:08:07 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.5ms)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 0.2ms (5 queries, 4 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-22 09:08:12 +0000
+Processing by HomeController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" LIMIT 5 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (1, 2, 3, 6, 7) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 26, 25, 27, 28, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in 'HomeController#index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 7.1ms | ActiveRecord: 0.7ms (8 queries, 4 cached) | GC: 1.0ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2025-09-22 09:08:14 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 2 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 3.7ms | GC: 2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.3ms | GC: 4.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | GC: 6.6ms)
+Completed 200 OK in 31ms (Views: 15.2ms | ActiveRecord: 0.4ms (6 queries, 4 cached) | GC: 8.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2025-09-22 09:08:16 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+  
+NoMethodError (undefined method 'recipes' for nil):
+  
+app/controllers/recipes_controller.rb:7:in 'RecipesController#index'
+  [1m[36mRecipe Pluck (1.0ms)[0m  [1m[34mSELECT "recipes"."id" FROM "recipes" WHERE "recipes"."user_id" = 4 /*application='Recboxhome'*/[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 LIMIT 1 /*application='Recboxhome'*/[0m
+  [1m[36mRecipeIngredient Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" = 12 /*application='Recboxhome'*/[0m
+Started GET "/login" for 127.0.0.1 at 2025-09-22 09:14:09 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 8.6ms | ActiveRecord: 0.7ms (5 queries, 4 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-09-22 09:14:35 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'johndoe@email.com' LIMIT 1 /*action='create',application='Recboxhome',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in 'SessionsController#create'
+Redirected to http://localhost:3000/userhome
+Completed 302 Found in 239ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2025-09-22 09:14:35 +0000
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='uindex',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 4.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/your-recipes" for 127.0.0.1 at 2025-09-22 09:14:39 +0000
+Processing by HomeController#urecipes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/urecipes.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (6, 7, 12) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (26, 2, 25, 27, 28, 6, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36, 15, 9, 16, 18, 43) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  Rendered home/urecipes.html.erb within layouts/application (Duration: 6.5ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 0.6ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2025-09-22 09:14:42 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "12"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 4.0ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/recipes/12" for 127.0.0.1 at 2025-09-22 09:14:45 +0000
+Processing by RecipesController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "12"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 LIMIT 1 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mRecipeIngredient Load (1.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" = 12 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mRecipeIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "recipe_ingredients" WHERE "recipe_ingredients"."id" = 94 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mRecipeIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "recipe_ingredients" WHERE "recipe_ingredients"."id" = 95 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mRecipeIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "recipe_ingredients" WHERE "recipe_ingredients"."id" = 96 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mRecipeIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "recipe_ingredients" WHERE "recipe_ingredients"."id" = 97 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mRecipeIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "recipe_ingredients" WHERE "recipe_ingredients"."id" = 98 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mRecipeIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "recipe_ingredients" WHERE "recipe_ingredients"."id" = 99 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mRecipe Destroy (0.1ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = 12 /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:54:in 'RecipesController#destroy'
+Redirected to http://localhost:3000/recipes
+Completed 303 See Other in 43ms (ActiveRecord: 11.7ms (10 queries, 0 cached) | GC: 3.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2025-09-22 09:14:45 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='index',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/views/recipes/index.html.erb:8
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (Duration: 7.8ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 12.9ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/your-recipes" for 127.0.0.1 at 2025-09-22 09:15:04 +0000
+Processing by HomeController#urecipes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/urecipes.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = 4 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" IN (6, 7) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (26, 2, 25, 27, 28, 6, 29, 30, 31, 32, 33, 34, 39, 19, 35, 36) /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/views/home/urecipes.html.erb:3
+  Rendered home/urecipes.html.erb within layouts/application (Duration: 7.2ms | GC: 1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='urecipes',application='Recboxhome',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 1.0ms)
+Completed 200 OK in 22ms (Views: 9.9ms | ActiveRecord: 0.5ms (4 queries, 0 cached) | GC: 1.0ms)
+
+
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12 /* loading for pp */ LIMIT 11 /*application='Recboxhome'*/[0m
+  [1m[36mRecipeIngredient Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" = 12 /*application='Recboxhome'*/[0m
+  [1m[36mIngredient Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ingredients" WHERE "ingredients"."ingr_name" = 'Lemon' /*application='Recboxhome'*/[0m
+Started GET "/search" for 127.0.0.1 at 2025-09-22 09:17:37 +0000
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/search?ingredient_query=lemon&commit=Search+Recipes" for 127.0.0.1 at 2025-09-22 09:17:39 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"ingredient_query" => "lemon", "commit" => "Search Recipes"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipe_ingredients"."recipe_id" = "recipes"."id" INNER JOIN "recipe_ingredients" "recipe_ingredients_recipes_join" ON "recipe_ingredients_recipes_join"."recipe_id" = "recipes"."id" INNER JOIN "ingredients" ON "ingredients"."id" = "recipe_ingredients_recipes_join"."ingredient_id" WHERE (ingredients.ingr_name LIKE '%lemon%') /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/views/search/index.html.erb:10
+  Rendered search/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | GC: 2.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | GC: 2.4ms)
+Completed 200 OK in 34ms (Views: 10.7ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/recipes/10" for 127.0.0.1 at 2025-09-22 09:17:43 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id" => "10"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 10 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/_recipe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='show',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 4.2ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes/10/edit" for 127.0.0.1 at 2025-09-22 09:17:44 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id" => "10"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 10 LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/recipes_controller.rb:65:in 'RecipesController#set_recipe'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" = 10 /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/views/recipes/_form.html.erb:37
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" /*action='edit',application='Recboxhome',controller='recipes'*/[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/recipes/_form.html.erb:42:in 'Enumerable#collect'
+  Rendered recipes/_form.html.erb (Duration: 18.8ms | GC: 2.8ms)
+  Rendered recipes/edit.html.erb within layouts/application (Duration: 19.3ms | GC: 2.8ms)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | GC: 2.8ms)
+Completed 200 OK in 33ms (Views: 20.9ms | ActiveRecord: 0.7ms (9 queries, 5 cached) | GC: 3.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2025-09-22 09:18:01 +0000
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='Recboxhome',controller='search'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in 'ApplicationController#current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mIngredient Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ingredients" WHERE "ingredients"."ingr_name" = 'Flour' /*application='Recboxhome'*/[0m
